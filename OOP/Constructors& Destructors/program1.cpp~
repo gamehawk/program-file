@@ -1,0 +1,28 @@
+
+/*Program to demonstrate the usage of a private/protected constructor
+*/
+#include <iostream>
+#include <string>
+using namespace std;
+//a class that manages the simgle log file of a program
+class LogFileManager
+{
+   private:
+	fstream f;
+	LogFileManager instance;
+	LogFileManager(string name):f(name){}
+   public:
+	LogFileManager getInstance(string name)
+	{
+		if(instance)
+	         	return instance;
+		else 
+		        instance(name);
+		return instance;
+	}
+}
+
+int main()
+{
+	
+}

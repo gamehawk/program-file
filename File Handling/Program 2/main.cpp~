@@ -1,0 +1,33 @@
+
+/*Program to store and retrieve a class from a file. 
+*/
+
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+class T
+{
+	int x; 
+	string z;
+	public T(int x, int z):x(x),z(z){}
+};
+
+int main ()
+{
+    string file;
+    cout<<"Enter file name:\n";
+    cin>>file;
+    ifstream f(file,ios::in,ios::bin);
+    int p;
+    float q;
+    cout<<"Enter p:\n";
+    cin>>p;
+    cout<<"Enter q:\n";
+    cin>>q;
+    T a(p,q);
+    f.write((char*)(&a),sizeof(T));
+    f.read((char*)(&a),sizeof(T));
+    cout<<"p:"<<p<<"\nq:"<<q;	
+}

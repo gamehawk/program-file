@@ -1,0 +1,17 @@
+
+/*Program to demonstrate the role of a Destructor
+*/
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Complex
+{
+	
+}
+	
+	
+int main()
+{
+  
+}

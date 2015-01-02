@@ -1,0 +1,25 @@
+
+/*
+*/
+#include <iostream>
+#include <string>
+#include <iostream>
+#include <string>
+using namespace std;
+
+class StringWrapper
+{
+   public:
+   string s;
+   StringWrapper(string s):s(s){}
+   StringWrapper(char* s):s(string(s)){}
+   StringWrapper(StringWrapper a):s(a.s){}
+
+};
+
+int main()
+{
+	char c[] = "efegregr";
+	string s = "erfegr";
+	cout<<StringWrapper(c).s<<endl<<StringWrapper(s).s;
+}
